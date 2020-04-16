@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, TextInput, TouchableOpacity, View} from 'react-native';
+import {Alert, Text, TextInput, TouchableOpacity, View} from 'react-native';
 import styles from './styles';
 
 export default class App extends Component {
@@ -34,6 +34,7 @@ export default class App extends Component {
     } else if (s.resultado < 40) {
       s.resultadoText = 'Obesidade Grau II (severo)';
     } else {
+      s.resultadoText = Alert.alert('Informe seu peso e altura');
     }
     this.setState(s);
   }
